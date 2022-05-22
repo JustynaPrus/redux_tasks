@@ -6,7 +6,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<CheckLogIn />} exact />
+          <Route path="/redux_tasks/" element={<CheckLogIn />} exact />
         </Routes>
       </Router>
     </>
