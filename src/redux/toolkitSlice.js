@@ -13,5 +13,33 @@ export const isLogInSlice = createSlice({
   },
 });
 
+export const customersTableSlice = createSlice({
+  name: "customersTable",
+  initialState: {
+    data: [],
+    page: 1,
+    limit: 3,
+    sortBy: "",
+  },
+  reducers: {
+    nextPage: (state) => {
+      if (state.page < 6 / state.limit) {
+        state.page += 1;
+      }
+    },
+    prevPage: (state) => {
+      if (state.page > 1) {
+        state.page -= 1;
+      }
+    },
+  },
+});
+
 export const { logIn, logOut } = isLogInSlice.actions;
-export const store = configureStore({ reducer: isLogInSlice.reducer });
+export const { nextPage, prevPage } = customersTableSlice.actions;
+export const store = configureStore({
+  reducer: {
+    isLogInSlice: isLogInSlice.reducer,
+    customersTableSlice: customersTableSlice.reducer,
+  },
+});
