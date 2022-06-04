@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { logIn } from "../redux/toolkitSlice";
+import { logIn } from "../../redux/toolkitSlice";
 import { useFormik, FormikProvider } from "formik";
 import * as yup from "yup";
 
@@ -29,9 +29,10 @@ export const FakeLoginComponent = () => {
     <FormikProvider value={formik}>
       <p>Zaloguj się</p>
       <form onSubmit={formik.handleSubmit}>
+        {/* TODO: where label? :( */}
         <input name="login" onChange={formik.handleChange} />
         <p>{formik.touched.login && formik.errors.login}</p>
-        <input name="password" onChange={formik.handleChange} />
+        <input name="password" type="password" onChange={formik.handleChange} />
         <p>{formik.touched.password && formik.errors.password}</p>
         <button type="submit">Zaloguj się</button>
       </form>

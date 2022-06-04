@@ -4,7 +4,7 @@ import { WelcomeComponent } from "./WelcomeComponent";
 import { FakeLoginComponent } from "./FakeLoginComponent";
 
 export const CheckLogIn = () => {
-  const isloggIn = useSelector((state) => state.loggedIn);
+  const { loggedIn } = useSelector((state) => state.isLogInSlice);
 
-  return <>{isloggIn ? <WelcomeComponent /> : <FakeLoginComponent />}</>;
+  return <>{loggedIn ? <WelcomeComponent /> : <FakeLoginComponent />}</>;
 };
