@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import styled from "styled-components";
 
 export const StyledNav = styled.nav`
@@ -12,18 +11,3 @@ export const StyledLink = styled.li`
   color: black;
   padding: 10px;
 `;
-=======
-import styled from "styled-components";
-
-export const StyledNav = styled.nav`
-  display: flex;
-  margin-top: 10px;
-`;
-
-export const StyledLink = styled.li`
-  list-style: none;
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-`;
->>>>>>> f36d9c31cfbf4ff0a43d5b0cfd94ad861324c6bc
